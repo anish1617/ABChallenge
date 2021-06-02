@@ -1,0 +1,187 @@
+
+:root {
+/*=========== Colors ==========*/
+
+--first-card-color: hsl(31, 77%, 52%);
+--first-icon-circle-color: hsl(30, 72%, 42%);
+--first-icon-car-color: hsl(43, 94%, 72%);
+
+--second-card-color: hsl(184, 100%, 22%);
+--second-icon-circle-color: hsl(183, 100%, 17%);
+--second-icon-car-color: hsl(184, 68%, 45%);
+
+--third-card-color: hsl(179, 100%, 13%);
+--third-icon-circle-color: hsl(179, 100%, 10%);
+--third-icon-car-color: hsl(169, 70%, 46%);
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    margin: 10% auto;
+    color: #fff;
+}
+
+.cards__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 300px;
+    height: inherit;
+    padding: 40px;
+}
+.card__box1 {
+    background-color: var(--first-card-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card__box2 {
+    background-color: var(--second-card-color) ;
+}
+.card__box3 {
+    background-color: var(--third-card-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*========= Card Icons ==========*/
+.card__icon{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 25px;
+}
+
+.icon__stack, .icon__stack1, .icon__stack2 {
+    position: relative;
+}
+
+.icon__stack{ 
+    color: var(--first-icon-circle-color);
+}
+.icon__stack1{ 
+    color: var(--second-icon-circle-color);
+}
+.icon__stack2{ 
+    color: var(--third-icon-circle-color);
+}
+
+.icon__stack #car-icon, 
+.icon__stack1 #car-icon1,
+.icon__stack2 #car-icon2
+{
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    font-size: 1.5rem;
+}
+
+.icon__stack #car-icon {
+    color: var(--first-icon-car-color);
+}
+.icon__stack1 #car-icon1 {
+    color: var(--second-icon-car-color);
+}
+.icon__stack2 #car-icon2 {
+    color: var(--third-icon-car-color);
+}
+
+/*========= Card Title ==========*/
+.card__title {
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+.card__title h1 {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+/*========= Card Text ==========*/
+.card__text {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+ .card__text p {
+    font-size: 12px;
+    line-height: 1.4rem;
+    margin-bottom: 75px;
+}
+
+.card__box1 .card__text p {
+    color: var(--first-icon-car-color);
+}
+.card__box2 .card__text p {
+    color: var(--second-icon-car-color);
+}
+.card__box3 .card__text p {
+    color: var(--third-icon-car-color);
+}
+
+
+/*========= Card Button ==========*/
+
+
+.btn {
+    font-family: 'Lexend Deca', sans-serif;
+    color: #111;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.card__box1 .btn {
+    color: var(--first-card-color);
+}
+.card__box2 .btn {
+    color: var(--second-card-color);
+}
+.card__box3 .btn {
+    color: var(--third-card-color);
+}
+
+
+@media (max-width: 992px) {
+    
+    .cards__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .cards__container .card {
+        width: 300px;
+        margin: 5px auto;
+        border-radius: 10px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .cards__container .card {
+        max-width: 300px;
+    }
+}
